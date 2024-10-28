@@ -52,6 +52,8 @@ tar -zxf ./dev.tar.gz
 #tar -zxf ./meta.tar.gz && mv -f clash clash_meta
 chmod +x ./clash* ; rm -rf ./*.gz
 
+git clone https://github.com/jerrykuku/luci-theme-argon.git
+
 # 修改 argon 为默认主题
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
