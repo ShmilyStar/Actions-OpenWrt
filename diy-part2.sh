@@ -48,3 +48,7 @@ tar -zxf ./dev.tar.gz
 #curl -sfL -o ./meta.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux-arm64.tar.gz
 #tar -zxf ./meta.tar.gz && mv -f clash clash_meta
 chmod +x ./clash* ; rm -rf ./*.gz
+
+# Add luci-app-mosdns
+git clone https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
