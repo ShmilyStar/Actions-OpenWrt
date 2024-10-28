@@ -16,10 +16,6 @@ sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generat
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
-#替换argon主题
-#git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-#git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
-
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
@@ -51,9 +47,3 @@ tar -zxf ./dev.tar.gz
 #curl -sfL -o ./meta.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux-arm64.tar.gz
 #tar -zxf ./meta.tar.gz && mv -f clash clash_meta
 chmod +x ./clash* ; rm -rf ./*.gz
-
-git clone https://github.com/jerrykuku/luci-theme-argon.git
-
-# 修改 argon 为默认主题
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
