@@ -72,12 +72,15 @@ jobs:
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: passwall
-      run: cd openwrt && git clone -b master --single-branch https://github.com/immortalwrt/packages.git packages_master && rm -rf ./feeds/packages/lang/golang && mv ./packages_master/lang/golang ./feeds/packages/lang && rm -rf ./packages_master
+    - name: 改变golange版本和tailscale版本
+      run: cd openwrt && git clone -b master --single-branch https://github.com/immortalwrt/packages.git packages_master && rm -rf ./feeds/packages/lang/golang && rm -rf ./feeds/packages/net/tailscale && mv ./packages_master/lang/golang ./feeds/packages/lang && mv ./packages_master/net/tailscale ./feeds/packages/net && rm -rf ./packages_master
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: 展示golange和tailscale版本
+      run: cd openwrt && cat ./feeds/packages/lang/golang/golang/Makefile | grep GO_VERSION && cat feeds/packages/net/tailscale/Makefile | grep PKG_VERSION
+      
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
