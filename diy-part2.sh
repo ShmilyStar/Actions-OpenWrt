@@ -48,3 +48,5 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 #curl -sfL -o ./meta.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux-arm64.tar.gz
 #tar -zxf ./meta.tar.gz && mv -f clash clash_meta
 #chmod +x ./clash* ; rm -rf ./*.gz
+
+sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
