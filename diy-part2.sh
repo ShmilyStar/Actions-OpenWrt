@@ -20,8 +20,8 @@ rm -rf feeds/packages/net/xray-core/
 rm -rf feeds/packages/net/xray-plugin/
 
 # Modify default theme
-#git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+git clone https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
