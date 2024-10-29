@@ -49,6 +49,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 #tar -zxf ./meta.tar.gz && mv -f clash clash_meta
 #chmod +x ./clash* ; rm -rf ./*.gz
 
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall/
+rm -rf feeds/packages/net/xray-core/
+rm -rf feeds/packages/net/xray-plugin/
+git clone https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages package/luci-app-passwall-packages
